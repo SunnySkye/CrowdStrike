@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "resources": {
+      "items": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "settings": {
+            "properties": {
+              "classes": {
+                "items": {
+                  "properties": {
+                    "action": {
+                      "enum": [
+                        "BLOCK_ALL",
+                        "FULL_ACCESS"
+                      ],
+                      "type": "string"
+                    },
+                    "exceptions": {
+                      "items": {
+                        "properties": {
+                          "action": {
+                            "enum": [
+                              "BLOCK_ALL",
+                              "FULL_ACCESS"
+                            ],
+                            "type": "string"
+                          },
+                          "combined_id": {
+                            "type": "string"
+                          },
+                          "product_id_decimal": {
+                            "type": "string"
+                          },
+                          "product_name": {
+                            "type": "string"
+                          },
+                          "serial_number": {
+                            "type": "string"
+                          },
+                          "use_wildcard": {
+                            "type": "boolean"
+                          },
+                          "vendor_id_decimal": {
+                            "type": "string"
+                          },
+                          "vendor_name": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "action"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "id": {
+                      "enum": [
+                        "ANY",
+                        "IMAGING",
+                        "MASS_STORAGE"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "exceptions"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "classes"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "settings"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "resources"
+  ],
+  "type": "object",
+  "title": "Device Control Policy PATCH Schema"
+}
