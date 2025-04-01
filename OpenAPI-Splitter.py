@@ -1,3 +1,9 @@
+# OpenAPI Specification Splitter
+
+# This script is designed to split OpenAPI specification YAML files into separate specification files based on the top-level path of each path definition.
+# This can be helpful when dealing with API specifications that have a huge number of endpoints, perhaps overwhelming the system trying to read the file.
+
+
 import os
 import yaml
 from collections import defaultdict
