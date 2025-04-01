@@ -1,8 +1,19 @@
 # OpenAPI Specification Splitter
-
-# This script is designed to split OpenAPI specification YAML files into separate specification files based on the top-level path of each path definition.
-# This can be helpful when dealing with API specifications that have a huge number of endpoints, perhaps overwhelming the system trying to read the file.
-
+#
+# This script is designed to split OpenAPI specification YAML files into separate specification files
+# based on the top-level path of each path definition. This can be helpful when dealing with API 
+# specifications that have a huge number of endpoints, perhaps overwhelming the system trying to read the file.
+#
+# Author: Skye Elizabeth Davis
+# Date: 2025-04-01
+# Repository: https://github.com/SunnySkye/CrowdStrike
+#
+# Prerequisites:
+# - PyYAML library (install with `pip install pyyaml`)
+#
+# Usage:
+# - Ensure the input OpenAPI file is named "openapi.yaml" and located in the same directory as this script.
+# - Run the script to split the OpenAPI specification into separate files in the "OpenAPI_Split" directory.
 
 import os
 import yaml
